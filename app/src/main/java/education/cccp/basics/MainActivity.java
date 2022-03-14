@@ -20,11 +20,15 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         l = new LinearLayout(this);
+
         t1 = new TextView(this);
         t2 = new TextView(this);
+
         e1 = new EditText(this);
         e2 = new EditText(this);
+
         t1.setText("text 1");
         t2.setText("text 2");
 
@@ -32,9 +36,9 @@ public class MainActivity extends AppCompatActivity {
         l.addView(t2);
         l.addView(e1);
         l.addView(e2);
+
         l.setOrientation(VERTICAL);
+
         setContentView(l);
     }
-
-
 }
