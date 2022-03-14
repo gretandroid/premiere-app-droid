@@ -1,7 +1,6 @@
 package education.cccp.basics;
 
-import static android.widget.LinearLayout.VERTICAL;
-
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
@@ -76,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
         l.addView(radioGroup);
         l.addView(spinner);
 
-        l.setOrientation(VERTICAL);
+        l.setOrientation(LinearLayout.VERTICAL);
         setContentView(l);
 
 
