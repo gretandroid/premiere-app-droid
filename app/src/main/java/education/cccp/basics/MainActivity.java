@@ -3,14 +3,17 @@ package education.cccp.basics;
 import static android.widget.LinearLayout.VERTICAL;
 
 import android.os.Bundle;
+import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,9 +22,11 @@ public class MainActivity extends AppCompatActivity {
     EditText e1, e2;
     CheckBox cb1, cb2;
     RadioGroup radioGroup;
-    RadioButton button1, button2;
+    RadioButton radioButton1, radioButton2;
+    Spinner spinner;
+    ArrayAdapter adapter;
+    String[] pays = {"france", "espagne", "italie"};
 
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
@@ -39,14 +44,14 @@ public class MainActivity extends AppCompatActivity {
         radioGroup = new RadioGroup(this);
         radioGroup.setOrientation(LinearLayout.HORIZONTAL);
 
-        button1 = new RadioButton(this);
-        button1.setText("marié");
+        radioButton1 = new RadioButton(this);
+        radioButton1.setText("marié");
 
-        button2 = new RadioButton(this);
-        button2.setText("célibataire");
+        radioButton2 = new RadioButton(this);
+        radioButton2.setText("célibataire");
 
-        radioGroup.addView(button1);
-        radioGroup.addView(button2);
+        radioGroup.addView(radioButton1);
+        radioGroup.addView(radioButton2);
 
 
         t1.setText("text 1");
@@ -55,6 +60,13 @@ public class MainActivity extends AppCompatActivity {
         cb1.setText("Français");
         cb2.setText("Anglais");
 
+        spinner = new Spinner(this);
+        adapter = new ArrayAdapter(this,
+                android.R.layout.simple_list_item_1,
+                pays);
+
+        spinner.setAdapter(adapter);
+
         l.addView(t1);
         l.addView(t2);
         l.addView(e1);
@@ -62,18 +74,10 @@ public class MainActivity extends AppCompatActivity {
         l.addView(cb1);
         l.addView(cb2);
         l.addView(radioGroup);
+        l.addView(spinner);
 
         l.setOrientation(VERTICAL);
         setContentView(l);
-
-
-
-
-
-
-
-
-
 
 
     }
