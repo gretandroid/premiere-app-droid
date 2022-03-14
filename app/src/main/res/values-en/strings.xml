@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="français">french</string>
+    <string name="anglais">english</string>
+    <string name="célibataire">single</string>
+    <string name="marié">married</string>
+</resources>

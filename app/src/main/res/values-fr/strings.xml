@@ -1,9 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name" translatable="false">PremierEmptyApp</string>
     <string name="français">Français</string>
     <string name="anglais">Anglais</string>
     <string name="célibataire">célibataire</string>
-    <string name="text1" translatable="false">text 1</string>
-    <string name="text2" translatable="false">text 2</string>
     <string name="marié">marié</string>
 </resources>
