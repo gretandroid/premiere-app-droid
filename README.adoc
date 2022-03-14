@@ -1,2 +1,3 @@
 = Premiere app android
 
+chaque commiteur se crée sa branche et y pousse ce qu'il veut
