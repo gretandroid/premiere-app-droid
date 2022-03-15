@@ -1,3 +1,17 @@
 = Premiere app android
 
 chaque commiteur se crée sa branche et y pousse ce qu'il veut
+
+
+=== se connecter au shell de l'émulateur
+
+==== récupérer le path du sdk :
+* sous linux : cd ~/Android/Sdk/
+* sous wincrotte : C:\Users\__MonUserName__\AppData\Local\Android\Sdk
+
+==== ouvrir un terminal:
+[source,bash]
+----
+cd ~/Android/Sdk/platform-tools/;
+./adb shell;
+----
