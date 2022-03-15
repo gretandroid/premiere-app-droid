@@ -35,7 +35,6 @@ public class MainActivity extends AppCompatActivity {
     RadioButton radioButton1, radioButton2;
     Spinner spinner;
     ArrayAdapter adapter;
-    String[] pays = {"france", "espagne", "italie"};
     ImageView imageView;
 
 
@@ -54,18 +53,26 @@ public class MainActivity extends AppCompatActivity {
         cb2 = new CheckBox(this);
 
         radioGroup = new RadioGroup(this);
-        radioGroup.setOrientation(HORIZONTAL);
-
         radioButton1 = new RadioButton(this);
+        radioButton2 = new RadioButton(this);
+
+        imageView = new ImageView(this);
+
+        spinner = new Spinner(this);
+
+        String[] countries = getResources().getStringArray(R.array.countries);
+        adapter = new ArrayAdapter(this,
+                simple_list_item_1,
+                countries);
+
+        radioGroup.setOrientation(HORIZONTAL);
         radioButton1.setText(marié);
 
-        radioButton2 = new RadioButton(this);
         radioButton2.setText(célibataire);
 
         radioGroup.addView(radioButton1);
         radioGroup.addView(radioButton2);
 
-        imageView = new ImageView(this);
         imageView.setImageResource(
                 pexels_pavel_danilyuk_8294792);
 
@@ -75,10 +82,6 @@ public class MainActivity extends AppCompatActivity {
         cb1.setText(français);
         cb2.setText(anglais);
 
-        spinner = new Spinner(this);
-        adapter = new ArrayAdapter(this,
-                simple_list_item_1,
-                pays);
 
         spinner.setAdapter(adapter);
 
@@ -94,7 +97,5 @@ public class MainActivity extends AppCompatActivity {
 
         l.setOrientation(VERTICAL);
         setContentView(l);
-
-
     }
 }

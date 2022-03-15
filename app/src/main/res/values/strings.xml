@@ -6,4 +6,9 @@
     <string name="text1" translatable="false">text 1</string>
     <string name="text2" translatable="false">text 2</string>
     <string name="marié">marié</string>
+    <string-array name="countries">
+        <item>France</item>
+        <item>Spain</item>
+        <item>Italy</item>
+    </string-array>
 </resources>
